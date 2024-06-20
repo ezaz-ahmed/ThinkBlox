@@ -1,21 +1,12 @@
-import type { Metadata } from "next";
-import { Raleway, Playfair_Display } from "next/font/google";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
+import Providers from '~/components/Providers';
 
 export const metadata: Metadata = {
-  title: "Bagvaly: Elegance in Every Bag",
-  description: "Discover a wide range of stylish and functional bags for every occasion at Bagvaly. From chic handbags and versatile backpacks to durable travel luggage, find your perfect carry companion. Shop now for quality bags at unbeatable prices with fast shipping and excellent customer service",
+  title: 'Bagvaly: Elegance in Every Bag',
+  description:
+    'Discover a wide range of stylish and functional bags for every occasion at Bagvaly. From chic handbags and versatile backpacks to durable travel luggage, find your perfect carry companion. Shop now for quality bags at unbeatable prices with fast shipping and excellent customer service',
 };
-
-const raleway = Raleway({
-  subsets: ["latin"],
-  variable: "--font-raleway"
-});
-
-const playfairDisplay = Playfair_Display({
-  subsets: ["latin"],
-  variable: "--font-playfair-display"
-});
 
 export default function RootLayout({
   children,
@@ -24,8 +15,12 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${raleway.variable} ${playfairDisplay.variable}`}>
-        {children}
+      <body>
+        <main className="flex grainy-light flex-col min-h-[calc(100vh-3.5rem-1px)]">
+          <div className="flex-1 flex flex-col h-full">
+            <Providers>{children}</Providers>
+          </div>
+        </main>
       </body>
     </html>
   );

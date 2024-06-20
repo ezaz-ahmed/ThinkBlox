@@ -19,8 +19,32 @@ const config = {
     },
     extend: {
       fontFamily: {
-        sans: ['Raleway', 'Helvetica', 'Arial', 'sans-serif'],
-        serif: ['Playfair Display', 'Georgia', 'Times New Roman', 'serif'],
+        sans: [
+          'Avenir',
+          'Montserrat',
+          'Corbel',
+          'URW Gothic',
+          'source-sans-pro',
+          'sans-serif',
+        ],
+        serif: [
+          'Superclarendon',
+          'Bookman Old Style',
+          'URW Bookman',
+          'URW Bookman L',
+          'Georgia Pro',
+          'Georgia',
+          'serif',
+        ],
+        mono: [
+          'ui-monospace',
+          'Cascadia Code',
+          'Source Code Pro',
+          'Menlo',
+          'Consolas',
+          'DejaVu Sans Mono',
+          'monospace',
+        ],
       },
       colors: {
         border: 'hsl(var(--border))',
