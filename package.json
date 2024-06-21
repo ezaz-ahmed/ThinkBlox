@@ -13,6 +13,7 @@
     "precommit": "lint-staged"
   },
   "dependencies": {
+    "@radix-ui/react-popover": "^1.1.0",
     "@radix-ui/react-slot": "^1.1.0",
     "@tanstack/react-query": "^5.45.1",
     "class-variance-authority": "^0.7.0",
